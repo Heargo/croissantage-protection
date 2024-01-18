@@ -1,0 +1,6 @@
+env/*
+!env/.gitkeep
+face/*
+!face/.gitkeep
+build
+dist
