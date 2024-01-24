@@ -11,6 +11,9 @@ video_capture = cv2.VideoCapture(0)
 # Load faces from the face folder andCreate arrays of known face encodings and their names
 known_face_encodings = []
 for filename in os.listdir("./face"):
+    #if not image skip it
+    if not filename.endswith(".jpg") or filename.endswith(".png"):
+        continue
     #load the image
     image = face_recognition.load_image_file("./face/"+filename)
     #get the encoding
